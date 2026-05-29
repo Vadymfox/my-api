@@ -3,8 +3,14 @@ export default async function handler(req, res) {
     // URL сайта организации
     const targetUrl = "https://main.prod.m11g.ajax.systems/webaut/statistics/by_product?stage=pack&location=is76&date_from=2026-05-27&date_to=2026-05-28&start_time=20%3A00&end_time=08%3A00";
 
-    // Встроенный fetch в Vercel
-    const response = await fetch(targetUrl);
+    // Добавляем заголовки авторизации
+    const response = await fetch(targetUrl, {
+      headers: {
+        "Cookie": "session=abc123; other=value"   // если нужна cookie
+       // "Authorization": "Bearer ТВОЙ_ТОКЕН",      // если нужен токен
+       // "User-Agent": "Mozilla/5.0"                // иногда помогает имитировать браузер
+      }
+    });
     const html = await response.text();
 
     // Ищем первую таблицу
