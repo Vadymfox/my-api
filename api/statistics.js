@@ -1,25 +1,30 @@
 export default async function handler(req, res) {
   try {
-    // URL сайта организации
     const targetUrl = "https://jh6tpj.csb.app/";
 
-    // Добавляем заголовки авторизации
     const response = await fetch(targetUrl, {
       headers: {
-        "Cookie": ""   // если нужна cookie
-       // "Authorization": "Bearer ТВОЙ_ТОКЕН",      // если нужен токен
-       // "User-Agent": "Mozilla/5.0"                // иногда помогает имитировать браузер
+        "User-Agent": "Mozilla/5.0", // имитация браузера
+        // "Cookie": "session=abc123", // если нужна авторизация
+        // "Authorization": "Bearer ТВОЙ_ТОКЕН" // если нужен токен
       }
     });
-    const html = await response.text();
 
-    // Ищем первую таблицу
-    const match = html.match(/<table[\s\S]*?<\/table>/i);
-    if (!match) {
-      return res.status(404).send("Таблица не найдена");
+    // Проверка: достучались ли до сайта
+    if (!response.ok) {
+      return res.status(response.status).json({
+        error: `Не удалось подключиться. Код ответа: ${response.status}`
+      });
     }
 
-    // Проверяем формат
+    const html = await response.text();
+
+    // Проверка: есть ли таблица
+    const match = html.match(/<table[\s\S]*?<\/table>/i);
+    if (!match) {
+      return res.status(404).json({ error: "Таблица не найдена" });
+    }
+
     const format = req.query.format || "html";
 
     if (format === "json") {
@@ -34,6 +39,6 @@ export default async function handler(req, res) {
       return res.status(200).send(match[0]);
     }
   } catch (error) {
-    return res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: `Ошибка запроса: ${error.message}` });
   }
 }
