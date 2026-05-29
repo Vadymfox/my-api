@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   try {
     // URL сайта организации
-    const targetUrl = "https://jh6tpj.csb.app/?";
+    const targetUrl = "https://jh6tpj.csb.app/";
 
     // Добавляем заголовки авторизации
     const response = await fetch(targetUrl, {
