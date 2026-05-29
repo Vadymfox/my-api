@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     // Добавляем заголовки авторизации
     const response = await fetch(targetUrl, {
       headers: {
-        "Cookie": "session=abc123; other=value"   // если нужна cookie
+        "Cookie": "cookieyes-consent=consentid:dDVsVFdQZW5vYTV2TXBLYzhXQ3R3QU10cHYyeXNGTWk,consent:no,action:yes,necessary:yes,functional:no,analytics:no,performance:no,advertisement:no,other:no; csrftoken=J2t6jjRNZbA0BSAANwFshop1V3Po1fF2; access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NDI5IiwidXNlciI6Ikxpc2l0c3luLlYiLCJleHAiOjE3Nzk5Njc4NzksImlhdCI6MTc3OTk2NDI3OSwianRpIjoiNjUxODA5In0.rRhwA0VjYO9rfvIM1LCohi6TDb39kszZVP6pSakJ1PQ-XqYjCTOTAVc0LzyrPaTKvyAyicTDaV_gt4JdtK5VWEk0vrCdiXiBWBwhyaJg1WK3Xk__EqeMMBOTVKutf_DOz4KCOJXw6GRSB_qbjgIRsW1AAoGT6Lte4EW6e2WFiCmM1W8HbWCoxKhMyvz1azBruZwPv9t-wfETOfa9Jdk4j7SDvcn9p_cEVgMD-wY8aVtRyq-y-Ym-csNeK4q37CAQsRmogjJSY_dF0RdWUQ07GzHZmWdy8HnqQbU1IWIEH4Jv9t9CyTB5veN3pbPAGZ6OxqlB-ZU9G6vpqL_Kq2p_6Q; access_token_exists=true"   // если нужна cookie
        // "Authorization": "Bearer ТВОЙ_ТОКЕН",      // если нужен токен
        // "User-Agent": "Mozilla/5.0"                // иногда помогает имитировать браузер
       }
