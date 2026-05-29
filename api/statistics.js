@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   try {
     // URL сайта организации
-    const targetUrl = "https://docs.google.com/spreadsheets/d/10le6n2i9rTOL5-ugJ8rLWmkQbVIhXJSPGMRUaNuveu4/edit?gid=565025723#gid=565025723";
+    const targetUrl = "https://main.prod.m11g.ajax.systems/webaut/statistics/by_product?stage=pack&location=is76&date_from=2026-05-27&date_to=2026-05-28&start_time=20%3A00&end_time=08%3A00";
 
     // Встроенный fetch в Vercel
     const response = await fetch(targetUrl);
