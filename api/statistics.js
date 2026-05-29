@@ -1,43 +1,33 @@
-import fetch from "node-fetch";
-
 export default async function handler(req, res) {
   try {
-    // URL сайта организации, где лежит таблица
+    // URL сайта организации
     const targetUrl = "https://docs.google.com/spreadsheets/d/10le6n2i9rTOL5-ugJ8rLWmkQbVIhXJSPGMRUaNuveu4/edit?gid=565025723#gid=565025723";
 
-    // Делаем запрос к сайту
+    // Встроенный fetch в Vercel
     const response = await fetch(targetUrl);
     const html = await response.text();
 
-    // Ищем первую таблицу на странице
+    // Ищем первую таблицу
     const match = html.match(/<table[\s\S]*?<\/table>/i);
     if (!match) {
       return res.status(404).send("Таблица не найдена");
     }
 
-    // Проверяем формат ответа (по умолчанию HTML)
+    // Проверяем формат
     const format = req.query.format || "html";
 
     if (format === "json") {
-      // Простейший парсинг строк таблицы в JSON
-      const rows = match[0]
-        .replace(/<\/tr>/g, "</tr>\n")
-        .match(/<tr[\s\S]*?<\/tr>/g) || [];
-
+      const rows = match[0].match(/<tr[\s\S]*?<\/tr>/g) || [];
       const data = rows.map(row =>
-        row
-          .replace(/<\/td>/g, "</td>\n")
-          .match(/<td[\s\S]*?<\/td>/g)
-          ?.map(cell => cell.replace(/<\/?td[^>]*>/g, "").trim())
+        (row.match(/<td[\s\S]*?<\/td>/g) || [])
+          .map(cell => cell.replace(/<\/?td[^>]*>/g, "").trim())
       );
-
       return res.status(200).json({ data });
     } else {
-      // Отдаём таблицу как HTML
       res.setHeader("Content-Type", "text/html; charset=utf-8");
       return res.status(200).send(match[0]);
     }
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 }
