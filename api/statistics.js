@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxpvo4tXu7Jn9KDh0cS2GXq7TwdDBZGuYosSzrxnmKR50ZluuO3tnLDYfjB6XAFpAA/exec");
+    const response = await fetch("https://script.google.com/macros/s/AKfycbw3cHL2sFDypLDaqlFYuuG6yb0pOhq-nTUY1PFSvCaYHCWSOSBigMz0N1Q8wTx4UxQ/exec");
     const text = await response.text();
 
     const contentType = response.headers.get("content-type") || "";
