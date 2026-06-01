@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const response = await fetch(targetUrl, {
       headers: {
         "Cookie": "cookieyes-consent=consentid:dDVsVFdQZW5vYTV2TXBLYzhXQ3R3QU10cHYyeXNGTWk,consent:no,action:yes,necessary:yes,functional:no,analytics:no,performance:no,advertisement:no,other:no; csrftoken=J2t6jjRNZbA0BSAANwFshop1V3Po1fF2; access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NDI5IiwidXNlciI6Ikxpc2l0c3luLlYiLCJleHAiOjE3ODAzMDIzMTcsImlhdCI6MTc4MDI5ODcxNywianRpIjoiNjcwNDU5In0.x1KTkxFEgbVFv1H-c7N2cleqXOmGdSqS4bxegV8omSHzn7arb37I-CsU0wRlUiOfj9mfpZcLHumH2TVM6tVs0CgeW0hacgAiBmkEjK-GGzlqSpFyXlizi_WqqmsNuHb6JcnXuaCSNZXgHZQsy7WsCSwp95BbSiZcqzcVx3s8gfBlERrF2LFe61sEELNxzbRmKmuMzuqkbPrqCQVvMhKult4UOAYqooA831iZHEr_GrlFAt8JZE0Jq6Gax7hp-UerLBOVhFp5dnEzi4wTZrqO9fKV9er88-4CvRDfEghoHHFQxtZhWaJvsUhBexs0ut0cmvK2GzM1OBKveGBL_WPN8Q; access_token_exists=true",
-        "User-Agent": "Mozilla/5.0"
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
       }
     });
 
