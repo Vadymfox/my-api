@@ -11,6 +11,8 @@ export default async function handler(req, res) {
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-origin",
+    "csrftoken": "J2t6jjRNZbA0BSAANwFshop1V3Po1fF2",
+    "access_token" "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NDI5IiwidXNlciI6Ikxpc2l0c3luLlYiLCJleHAiOjE3ODAzMTgxMTcsImlhdCI6MTc4MDMxNDUxNywianRpIjoiNjcxODk5In0.iwh_lSkRCsjhmDWY3xgEWoqUX38osst4dHu-Flixn-lCYAzkPyROMWRvuAjohoKDeoGFHPqV696OW3C2zLgm4CFM7-kMaRIR1m6laCQ2jy3A3n59UFbGaEPgEyiC64gnUtX8K0N-6KBBOSBhxVAwcLHUs7OSpdKqJ57BzcpTZaeZ_xXcBzGQqLlxZxdUE-tXRg8GvVSII5GO6XYSiiDaJHSqwuq2eEetFw2WrHs5J0z-Z_uuhHQN1J_tB97GUqmes4-Tpbg_YUg6xNHEOBFkFqvAp9VtlLjYvg7-wTFutagbi-QNG5eEIjJt0fPL5SvaYlLj_C3kha9qoHxQq4lDzg",
     "cookie": "cookieyes-consent=consentid:dDVsVFdQZW5vYTV2TXBLYzhXQ3R3QU10cHYyeXNGTWk,consent:no,action:yes,necessary:yes,functional:no,analytics:no,performance:no,advertisement:no,other:no; csrftoken=J2t6jjRNZbA0BSAANwFshop1V3Po1fF2; access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NDI5IiwidXNlciI6Ikxpc2l0c3luLlYiLCJleHAiOjE3ODAzMTgxMTcsImlhdCI6MTc4MDMxNDUxNywianRpIjoiNjcxODk5In0.iwh_lSkRCsjhmDWY3xgEWoqUX38osst4dHu-Flixn-lCYAzkPyROMWRvuAjohoKDeoGFHPqV696OW3C2zLgm4CFM7-kMaRIR1m6laCQ2jy3A3n59UFbGaEPgEyiC64gnUtX8K0N-6KBBOSBhxVAwcLHUs7OSpdKqJ57BzcpTZaeZ_xXcBzGQqLlxZxdUE-tXRg8GvVSII5GO6XYSiiDaJHSqwuq2eEetFw2WrHs5J0z-Z_uuhHQN1J_tB97GUqmes4-Tpbg_YUg6xNHEOBFkFqvAp9VtlLjYvg7-wTFutagbi-QNG5eEIjJt0fPL5SvaYlLj_C3kha9qoHxQq4lDzg; access_token_exists=true",
     "Referer": "https://main.prod.m11g.ajax.systems/webaut/statistics/by_product?utm_source=wp&utm_medium=homepage&utm_version=MS4xNC4w&stage=assembling&date_from=2026-05-21&date_to=2026-05-21"
   },
