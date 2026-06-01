@@ -1,29 +1,25 @@
 export default async function handler(req, res) {
   try {
-    const targetUrl = "https://main.prod.m11g.ajax.systems/statistics/api/last_sync/?entity_types=dev&entity_types=central&entity_types=component";
+    const targetUrl = "https://main.prod.m11g.ajax.systems/statistics/api/v3/by_grouping_name/?stage=assembling&format=region&location=is76&response_tz=Europe%2FKyiv&time_from=2026-05-30T08%3A00%3A00%2B03%3A00&time_to=2026-05-31T20%3A00%3A00%2B03%3A00&grouping_name0=product_name&grouping_name2=full_name&show_unique=true&unique_by=ftt&register_types=dev&register_types=central&register_types=component&register_types=accessory"; // замени на реальный адрес
 
     const response = await fetch(targetUrl, {
       headers: {
-        "Cookie": "cookieyes-consent=consentid:dDVsVFdQZW5vYTV2TXBLYzhXQ3R3QU10cHYyeXNGTWk,consent:no,action:yes,necessary:yes,functional:no,analytics:no,performance:no,advertisement:no,other:no; csrftoken=J2t6jjRNZbA0BSAANwFshop1V3Po1fF2; access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NDI5IiwidXNlciI6Ikxpc2l0c3luLlYiLCJleHAiOjE3ODAyOTg1NzcsImlhdCI6MTc4MDI5NDk3NywianRpIjoiNjcwMDk5In0.z482efurc-EL17SOXuiele2I9ZmpFL66ykprx-OSzpjU6NGtcHlplGM4inLTMChYPKk5Z2oy4NDdU0OStl98JrwJBRmgYJ7QwT7qd_4wVqOGit0SybbY7rlfroWLnNCGwPecK1BMTjXBdyFOBasZDnQo8_WAXoWBJVc0D_FNsxjDDzplTc_ZQC3y9Sgq4X5eRLdK9fUb_m2rg9HwS3U2LZLUJC_Q0bGNoXOHIut9b86aJxr7RbqunjMleRBl48lz_vdi9dp3zaaoVgvclqa_gy6dL1wpHJZuwI7bgoeqaqNBQTzSI9xOwGmgQUUIwm9MDzE6M7HAnU3_Zi_qA-HVtw; access_token_exists=true",
+        "Cookie": "cookieyes-consent=consentid:dDVsVFdQZW5vYTV2TXBLYzhXQ3R3QU10cHYyeXNGTWk,consent:no,action:yes,necessary:yes,functional:no,analytics:no,performance:no,advertisement:no,other:no; csrftoken=J2t6jjRNZbA0BSAANwFshop1V3Po1fF2; access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NDI5IiwidXNlciI6Ikxpc2l0c3luLlYiLCJleHAiOjE3ODAzMDIzMTcsImlhdCI6MTc4MDI5ODcxNywianRpIjoiNjcwNDU5In0.x1KTkxFEgbVFv1H-c7N2cleqXOmGdSqS4bxegV8omSHzn7arb37I-CsU0wRlUiOfj9mfpZcLHumH2TVM6tVs0CgeW0hacgAiBmkEjK-GGzlqSpFyXlizi_WqqmsNuHb6JcnXuaCSNZXgHZQsy7WsCSwp95BbSiZcqzcVx3s8gfBlERrF2LFe61sEELNxzbRmKmuMzuqkbPrqCQVvMhKult4UOAYqooA831iZHEr_GrlFAt8JZE0Jq6Gax7hp-UerLBOVhFp5dnEzi4wTZrqO9fKV9er88-4CvRDfEghoHHFQxtZhWaJvsUhBexs0ut0cmvK2GzM1OBKveGBL_WPN8Q; access_token_exists=true",
         "User-Agent": "Mozilla/5.0"
       }
     });
 
+    // Проверка: достучались ли
     if (!response.ok) {
       return res.status(response.status).json({
         error: `Не удалось подключиться. Код ответа: ${response.status}`
       });
     }
 
-    // Если API возвращает JSON
-    const data = await response.json();
-    return res.status(200).json(data);
-
-    // Если API возвращает HTML с таблицей:
-    // const html = await response.text();
-    // return res.status(200).send(html);
+    // Просто возвращаем первые 500 символов HTML
+    const html = await response.text();
+    return res.status(200).send(html.slice(0, 500));
 
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
-}
