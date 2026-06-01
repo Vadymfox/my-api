@@ -16,9 +16,7 @@ export default async function handler(req, res) {
   },
   "referrer": "https://main.prod.m11g.ajax.systems/webaut/statistics/by_product?utm_source=wp&utm_medium=homepage&utm_version=MS4xNC4w&stage=assembling&location=is76&unique_by=ftt&date_from=2026-05-30&date_to=2026-05-31",
   "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
+  "method": "GET"
 });
 
     if (!response.ok) {
