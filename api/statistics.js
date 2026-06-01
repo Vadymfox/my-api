@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     "accept-language": "uk,en-US;q=0.9,en;q=0.8,ru;q=0.7",
     "accept-profile": "public",
     "apikey": "sb_publishable_mB28_c5IoxmafFgkXzEORw_w7EUA2MV",
-    "authorization": "Bearer sb_publishable_mB28_c5IoxmafFgkXzEORw_w7EUA2MV",
+    
     "priority": "u=1, i",
     "Referer": "https://jh6tpj.csb.app/"
   },
