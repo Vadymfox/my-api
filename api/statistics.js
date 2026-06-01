@@ -1,22 +1,18 @@
 export default async function handler(req, res) {
   try {
-    const response = await fetch("https://main.prod.m11g.ajax.systems/core-db/api/v1/accounts/", {
+    const response = await fetch("https://main.prod.m11g.ajax.systems/statistics/api/last_sync/?entity_types=dev&entity_types=central&entity_types=component", {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "uk,en-US;q=0.9,en;q=0.8,ru;q=0.7",
-    "baggage": "sentry-environment=prod-main,sentry-release=1.14.0,sentry-public_key=886fc6538d01d2c8bfad5a45c5b324a6,sentry-trace_id=9c61ece492454e2f9cb61ffcd3c3cf50,sentry-sample_rate=1,sentry-sampled=true",
+    "authorization": "",
     "sec-ch-ua": "\"Chromium\";v=\"148\", \"Google Chrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"macOS\"",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin",
-    "sentry-trace": "9c61ece492454e2f9cb61ffcd3c3cf50-b5c7deb01355325e-1",
-    "x-requestuuid": "3-6c5bb995-fef3-43a7-bef9-5a32c9d2e33f",
-    "x-softname": "WelcomePage",
-    "x-softversion": "1.14.0"
+    "sec-fetch-site": "same-origin"
   },
-  "referrer": "https://main.prod.m11g.ajax.systems/webaut/",
+  "referrer": "https://main.prod.m11g.ajax.systems/webaut/statistics/by_product?utm_source=wp&utm_medium=homepage&utm_version=MS4xNC4w",
   "body": null,
   "method": "GET",
   "mode": "cors",
