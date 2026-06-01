@@ -3,7 +3,7 @@ export default async function handler(req, res) {
     const response = await fetch("https://fswcopwczgfofuijxcyp.supabase.co/rest/v1/3-Area?select=*", {
   "headers": {
    
-    "Referer": "https://jh6tpj.csb.app/"
+
   },
   "body": null,
   "method": "GET"
