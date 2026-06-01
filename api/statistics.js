@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   try {
-    const response = await fetch("https://main.prod.m11g.ajax.systems/core-db/api/v1/general/team/", {
+    const response = await fetch("https://main.prod.m11g.ajax.systems/core-db/api/v1/accounts/", {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "uk,en-US;q=0.9,en;q=0.8,ru;q=0.7",
@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-origin",
-    "x-requestuuid": "7-5dac7293-10cd-4311-a7dc-d401949eb2c3",
+    "x-requestuuid": "8-5dac7293-10cd-4311-a7dc-d401949eb2c3",
     "x-softname": "Statistics",
     "x-softversion": "1.15.1"
   },
