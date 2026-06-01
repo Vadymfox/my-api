@@ -5,6 +5,7 @@ export default async function handler(req, res) {
     "accept": "application/json, text/plain, */*",
     "accept-language": "uk,en-US;q=0.9,en;q=0.8,ru;q=0.7",
     "authorization": "Token undefined",
+    "cookie":"cookieyes-consent=consentid:dDVsVFdQZW5vYTV2TXBLYzhXQ3R3QU10cHYyeXNGTWk,consent:no,action:yes,necessary:yes,functional:no,analytics:no,performance:no,advertisement:no,other:no; csrftoken=J2t6jjRNZbA0BSAANwFshop1V3Po1fF2; access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NDI5IiwidXNlciI6Ikxpc2l0c3luLlYiLCJleHAiOjE3ODAzMTQ0NDUsImlhdCI6MTc4MDMxMDg0NSwianRpIjoiNjcxNTYyIn0.XZ6KtJS7vAbFQQSVxq00l9tPWYgjx5DCW6kBwwZD8nmqpqQCZJq6W9loxXTDRV6L9xup0F8-n6EqrCob3wosDUTN3dJmWMAO5knf_VZW4I0wiTLu7IQ1LM_CJ3WXyAMTE1GEdVbZ5kkWJTVOQK7nXXce2MmwpK2ld6veUafgKB4lA99EXY68JZKGXNHN7tk3j4JAz2j0N5QOfCdWFMlvqIDJH_mv-nj3qT5d8KFdo3ew7CmupLUbKPdFdK_DApohC3Rx4r7QRJHtE19bZp8ag9un6bE5OGmENkym9PfqqD3aKYaMsQM5xMWKlaPFntRK0DO3qRmkBamXYRj9lJXK0A; access_token_exists=true",
     "requestuuid": "c6989d17-ceda-4db6-b378-f04df3dfdb94",
     "sec-ch-ua": "\"Chromium\";v=\"148\", \"Google Chrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
     "sec-ch-ua-mobile": "?0",
