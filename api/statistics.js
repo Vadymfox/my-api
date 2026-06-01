@@ -1,10 +1,7 @@
 export default async function handler(req, res) {
   try {
     const response = await fetch("https://fswcopwczgfofuijxcyp.supabase.co/rest/v1/3-Area?select=*", {
-  "headers": {
-   
 
-  },
   "body": null,
   "method": "GET"
 });
