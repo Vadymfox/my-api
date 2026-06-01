@@ -1,20 +1,21 @@
 export default async function handler(req, res) {
   try {
-    const response = await fetch("https://main.prod.m11g.ajax.systems/core-db/api/v1/accounts/", {
+    const response = await fetch("https://fswcopwczgfofuijxcyp.supabase.co/rest/v1/3-Area?select=*", {
   "headers": {
-    "accept": "application/json, text/plain, */*",
+    "accept": "*/*",
     "accept-language": "uk,en-US;q=0.9,en;q=0.8,ru;q=0.7",
+    "accept-profile": "public",
+    "apikey": "sb_publishable_mB28_c5IoxmafFgkXzEORw_w7EUA2MV",
+    "authorization": "Bearer sb_publishable_mB28_c5IoxmafFgkXzEORw_w7EUA2MV",
+    "priority": "u=1, i",
     "sec-ch-ua": "\"Chromium\";v=\"148\", \"Google Chrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"macOS\"",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin",
-    "x-requestuuid": "19-8e994178-48e9-40f4-a03b-afcde47d77c4",
-    "x-softname": "Statistics",
-    "x-softversion": "1.15.1",
-    "cookie": "cookieyes-consent=consentid:dDVsVFdQZW5vYTV2TXBLYzhXQ3R3QU10cHYyeXNGTWk,consent:no,action:yes,necessary:yes,functional:no,analytics:no,performance:no,advertisement:no,other:no; csrftoken=J2t6jjRNZbA0BSAANwFshop1V3Po1fF2; access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NDI5IiwidXNlciI6Ikxpc2l0c3luLlYiLCJleHAiOjE3ODAzMTgxMTcsImlhdCI6MTc4MDMxNDUxNywianRpIjoiNjcxODk5In0.iwh_lSkRCsjhmDWY3xgEWoqUX38osst4dHu-Flixn-lCYAzkPyROMWRvuAjohoKDeoGFHPqV696OW3C2zLgm4CFM7-kMaRIR1m6laCQ2jy3A3n59UFbGaEPgEyiC64gnUtX8K0N-6KBBOSBhxVAwcLHUs7OSpdKqJ57BzcpTZaeZ_xXcBzGQqLlxZxdUE-tXRg8GvVSII5GO6XYSiiDaJHSqwuq2eEetFw2WrHs5J0z-Z_uuhHQN1J_tB97GUqmes4-Tpbg_YUg6xNHEOBFkFqvAp9VtlLjYvg7-wTFutagbi-QNG5eEIjJt0fPL5SvaYlLj_C3kha9qoHxQq4lDzg; access_token_exists=true",
-    "Referer": "https://main.prod.m11g.ajax.systems/webaut/statistics/by_product?utm_source=wp&utm_medium=homepage&utm_version=MS4xNC4w&stage=assembling&date_from=2026-05-21&date_to=2026-05-21"
+    "sec-fetch-site": "cross-site",
+    "x-client-info": "supabase-js-web/2.106.2",
+    "Referer": "https://jh6tpj.csb.app/"
   },
   "body": null,
   "method": "GET"
