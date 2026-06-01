@@ -1,11 +1,10 @@
 export default async function handler(req, res) {
   try {
-    const response = await fetch("https://main.prod.m11g.ajax.systems/statistics/api/v3/by_grouping_name/?stage=assembling&format=region&location=all&response_tz=UTC&time_from=2026-05-21T08%3A00%3A00%2B00%3A00&time_to=2026-05-21T20%3A00%3A00%2B00%3A00&grouping_name0=product_name&grouping_name2=full_name&show_unique=true&unique_by=ltt&register_types=dev&register_types=central&register_types=component&register_types=accessory", {
+    const response = await fetch("https://main.prod.m11g.ajax.systems/statistics/api/last_sync/?entity_types=dev&entity_types=central&entity_types=component", {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "uk,en-US;q=0.9,en;q=0.8,ru;q=0.7",
-    "authorization": "Token undefined",
-    "requestuuid": "9a30540c-9aea-4349-82aa-82a840a40fdf",
+    "authorization": "",
     "sec-ch-ua": "\"Chromium\";v=\"148\", \"Google Chrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"macOS\"",
