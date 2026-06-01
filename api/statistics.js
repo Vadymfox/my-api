@@ -31,8 +31,8 @@ export default async function handler(req, res) {
   "headers": {
   */
    // "accept": "application/json, text/plain, */*",
-/*    "accept-language": "uk,en-US;q=0.9,en;q=0.8,ru;q=0.7",
-    "authorization": "Token undefined",
+   // "accept-language": "uk,en-US;q=0.9,en;q=0.8,ru;q=0.7",
+  /*  "authorization": "Token undefined",
     "requestuuid": "de127ce6-8d5e-4413-a126-bad1fb280fcc",
     "sec-ch-ua": "\"Chromium\";v=\"148\", \"Google Chrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
     "sec-ch-ua-mobile": "?0",
