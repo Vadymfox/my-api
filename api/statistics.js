@@ -6,8 +6,7 @@ export default async function handler(req, res) {
     "apikey": "sb_publishable_mB28_c5IoxmafFgkXzEORw_w7EUA2MV"
    
   },
-  "body": null,
-  "method": "GET"
+
 });
 
     if (!response.ok) {
