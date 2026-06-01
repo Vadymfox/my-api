@@ -8,13 +8,6 @@ export default async function handler(req, res) {
     "apikey": "sb_publishable_mB28_c5IoxmafFgkXzEORw_w7EUA2MV",
     "authorization": "Bearer sb_publishable_mB28_c5IoxmafFgkXzEORw_w7EUA2MV",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"148\", \"Google Chrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"macOS\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "x-client-info": "supabase-js-web/2.106.2",
     "Referer": "https://jh6tpj.csb.app/"
   },
   "body": null,
